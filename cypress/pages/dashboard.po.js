@@ -5,15 +5,16 @@ class dashboardPage{
       return "PIM"
     }
 
+    pimMenu2(){
+
+      return "PIM"
+    }
     dashboardMenu(){
 
         return "Dashboard"
       }
 
-    buzzMenu(){
-
-        return "Buzz"
-    }
+ 
 }
 
 
