@@ -1,0 +1,35 @@
+{
+  "name": "learncypressb20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --headed --spec cypress/e2e/Buzz/newsfeed.cy.js",
+    "generateallurereports": "npx cypress run --env allure=true --reporter mocha-allure-reporter",
+    "openreport": "allure serve",
+    "alluretest": "npm run generateallurereports && npm run openreport",
+    "open": "npx cypress open",
+    "teststaging": "npx cypress run --config-file staging.cypress.config.js",
+    "testprod": "npx cypress run --config-file prod.cypress.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.8.1",
+    "cypress-downloadfile": "^1.2.3",
+    "cypress-real-events": "^1.12.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

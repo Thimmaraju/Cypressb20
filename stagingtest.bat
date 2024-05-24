@@ -1,0 +1,1 @@
+npx cypress run --config-file staging.cypress.config.js
